@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Dignity — Helping vulnerable people stay warm</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    ::selection { background: var(--accent, #bf5320); color: var(--on-accent, #fff); }
+    button, input, textarea { font-family: inherit; }
+    input:focus, textarea:focus { border-color: var(--accent) !important; }
+    @keyframes pdFade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pdPop { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: none; } }
+    @media (max-width: 880px) {
+      .pd-hero-grid, .pd-2col { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .pd-3col { grid-template-columns: 1fr !important; }
+      .pd-nav-links a:not(:last-child) { display: none; }
+    }
+    @media (max-width: 560px) {
+      .pd-nav-links { gap: 14px !important; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="vendor/react.production.min.js"></script>
+  <script src="vendor/react-dom.production.min.js"></script>
+  <script src="js/app.bundle.js"></script>
+</body>
+</html>
